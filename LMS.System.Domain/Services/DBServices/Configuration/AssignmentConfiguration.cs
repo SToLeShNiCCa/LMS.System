@@ -54,7 +54,7 @@ namespace LMS.System.Domain.Services.DBServices.Configuration
             builder.HasOne(p => p.CourseForAssignment)
                 .WithMany(p => p.AssignmentsInCourse)
                 .HasForeignKey(p => p.CourseId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }
