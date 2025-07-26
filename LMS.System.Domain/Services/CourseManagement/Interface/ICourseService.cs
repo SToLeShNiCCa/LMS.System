@@ -1,3 +1,4 @@
+using LMS.System.Domain.Services.CourseManagement.CourseService;
 using LMS.System.Domain.Services.CourseServices.CourseService;
 using X.PagedList;
 

@@ -11,10 +11,14 @@ namespace LMS.System.Domain.Services.CourseManagement.DTO
     /// </summary>
     public class CourseCreateRequest
     {
+        /// <summary>
+        /// Заголовок курса.
+        /// </summary>
         public required string Title { get; set; }
 
+        /// <summary>
+        /// Описание курса.
+        /// </summary>
         public required string Description { get; set; }
-
-        public bool IsPublished
     }
 }
