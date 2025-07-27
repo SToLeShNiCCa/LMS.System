@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace LMS.System.Migrations.MSSQL.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class InitDatabaseOnNewDevice : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

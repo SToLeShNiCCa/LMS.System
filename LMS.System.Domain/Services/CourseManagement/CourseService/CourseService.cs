@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LMS.System.Domain.Services.CourseManagement.CourseService;
+using LMS.System.Domain.Services.CourseManagement.DTO;
+using LMS.System.Domain.Services.CourseManagement.Page;
 using LMS.System.Domain.Services.CourseServices.Interface;
 using X.PagedList;
 
@@ -31,7 +32,7 @@ namespace LMS.System.Domain.Services.CourseServices.CourseService
         /// <param name="request">Реквест для создания курса.</param>
         /// <param name="cancellationToken">Токен отмены.</param>
         /// <returns>Созданный курс.</returns>
-        public Task<int> CreateCourseAsync(CourseRequest request, CancellationToken cancellationToken)
+        public Task<int> CreateCourseAsync(CourseCreateRequest request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
@@ -64,7 +65,7 @@ namespace LMS.System.Domain.Services.CourseServices.CourseService
         /// <param name="request">Реквест курса.</param>
         /// <param name="cancellationToken">Токен отмены.</param>
         /// <returns>Пагинированный список.</returns>
-        public Task<IPagedList<CourseResponse>> GetCoursePageAsync(CourseRequest request, CancellationToken cancellationToken)
+        public Task<IPagedList<CourseResponse>> GetCoursePageAsync(CoursePageRequest request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
@@ -86,7 +87,7 @@ namespace LMS.System.Domain.Services.CourseServices.CourseService
         /// <param name="request">Реквест обновления.</param>
         /// <param name="cancellationToken">Токен отмены.</param>
         /// <returns>Ничего.</returns>
-        public Task UpdateCourseAsync(CourseRequest request, CancellationToken cancellationToken)
+        public Task UpdateCourseAsync(CourseUpdateRequest request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }

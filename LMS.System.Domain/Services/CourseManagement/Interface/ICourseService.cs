@@ -1,4 +1,5 @@
-using LMS.System.Domain.Services.CourseManagement.CourseService;
+using LMS.System.Domain.Services.CourseManagement.DTO;
+using LMS.System.Domain.Services.CourseManagement.Page;
 using LMS.System.Domain.Services.CourseServices.CourseService;
 using X.PagedList;
 
@@ -15,7 +16,7 @@ namespace LMS.System.Domain.Services.CourseServices.Interface
         /// <param name="request">Демо-курс.</param>
         /// <param name="cancellationToken">Токен отмены.</param>
         /// <returns>Пагинированный список.</returns>
-        Task<IPagedList<CourseResponse>> GetCoursePageAsync(CourseRequest request, CancellationToken cancellationToken);
+        Task<IPagedList<CourseResponse>> GetCoursePageAsync(CoursePageRequest request, CancellationToken cancellationToken);
 
         /// <summary>
         /// Получения курса по id.
@@ -31,7 +32,7 @@ namespace LMS.System.Domain.Services.CourseServices.Interface
         /// <param name="request">Демо-курс.</param>
         /// <param name="cancellationToken">Токен отмены.</param>
         /// <returns>Ничего.</returns>
-        Task<int> CreateCourseAsync(CourseRequest request, CancellationToken cancellationToken);
+        Task<int> CreateCourseAsync(CourseCreateRequest request, CancellationToken cancellationToken);
 
         /// <summary>
         /// Метод обновления данный курса.
@@ -39,7 +40,7 @@ namespace LMS.System.Domain.Services.CourseServices.Interface
         /// <param name="request">Курс.</param>
         /// <param name="cancellationToken">Токен отмены.</param>
         /// <returns>Ничего.</returns>
-        Task UpdateCourseAsync(CourseRequest request, CancellationToken cancellationToken);
+        Task UpdateCourseAsync(CourseUpdateRequest request, CancellationToken cancellationToken);
 
         /// <summary>
         /// метод удаления курса.
